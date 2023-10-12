@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redis Demo</title>
+    <link rel="icon" href="../images/icon.png">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../style/home.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h1 id="sidebar-heading">Redis-NodeJS Demo</h1>
+            <img src="../images/node_redis.png" alt="Redis+NodeJS" id="redis-node-logo">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Description</th>
+                        <th>Endpoint</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>List 100 posts</td>
+                        <td>
+                            <div id="fetch-data" onclick="getData('posts')" class="button-default button-slanted">
+                                <span class="button-slanted-content">/post</span>
+                            </div>    
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>List 500 comments</td>
+                        <td>
+                            <div id="fetch-data" onclick="getData('comments')" class="button-default button-slanted">
+                                <span class="button-slanted-content">/comments</span>
+                            </div>    
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>List 5000 photos</td>
+                        <td>
+                            <div id="fetch-data" onclick="getData('photos')" class="button-default button-slanted">
+                                <span class="button-slanted-content">/photos</span>
+                            </div>    
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>List 10 users</td>
+                        <td>
+                            <div id="fetch-data" onclick="getData('users')" class="button-default button-slanted">
+                                <span class="button-slanted-content">/users</span>
+                            </div>    
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>List 200 todos</td>
+                        <td>
+                            <div id="fetch-data" onclick="getData('todos')" class="button-default button-slanted">
+                                <span class="button-slanted-content">/todos</span>
+                            </div>    
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>List 100 albums</td>
+                        <td>
+                            <div id="fetch-data" onclick="getData('albums')" class="button-default button-slanted">
+                                <span class="button-slanted-content">/albums</span>
+                            </div>    
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="main-panel">
+            <div class="pre-load">
+                <h2>Select an API Endpoint to get Data</h2>
+            </div>
+            <div class="loader" hidden>
+                <div class="loading">
+                    <div class="lds-ripple"><div></div><div></div></div>
+                    <h3 id="loading-text">Fetching ...</h3>
+                </div>
+            </div>
+            <div class="fetch-data" hidden>
+                <h2 id="heading">Data</h2>
+                <p id="rtime">
+                    <span id="response-time"></span>
+                </p>
+                <pre><code id="data-snippet" class="language-json"></code></pre>
+            </div>
+        </div>   
+    </div>
+    <script src="../script/home.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/components/prism-markup.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/prism.js"></script>
+</body>
+</html>
