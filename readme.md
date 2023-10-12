@@ -47,7 +47,7 @@ Check status of the container using `docker-compose ps` command
 
 ![Check status](./public/images/readme/image-4.png)
 
-Step - 3: Open the browser and go to `http://localhost:3000/` or `http://127.0.0.1:3000/
+Step - 3: Open the browser and go to `http://localhost:3000/` or `http://127.0.0.1:3000/`
 
 Step - 4: You can see output logs in docker desktop or using the command `docker-compose exec redis-demo-node-1 sh`
 
